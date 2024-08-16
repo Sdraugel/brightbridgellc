@@ -7,19 +7,18 @@
     <!-- Include Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
         }
         .svg-container {
-            margin: -1px;
-            /* background-color: white; */
+            margin-bottom: -1px;
+            padding: 0;
+            background-color: white;
             border: none;
             box-shadow: none;
             line-height: 0;
-            position: relative; /* Ensure the container is the reference for positioning */
+            position: relative;
         }
         .svg-container img {
             width: 100%;
@@ -29,134 +28,62 @@
             padding: 0;
             border: 0;
         }
-        .contact-info {
+        .social-icons-left {
+            position: fixed;
+            top: 50%;
+            left: 0vw; /* Adjusted with viewport width */
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 20px;
+            gap: 0vw; /* Spacing between the icons, scaled with screen size */
+            z-index: 1000; /* Ensure the icons are above other content */
         }
-        .contact-info a {
-            color: black; /* Black color for the text */
-            font-size: 4vw; /* Relative font size */
-            text-decoration: none;
-            margin-bottom: 2vw; /* Space between contact items */
-        }
-        .contact-info i {
-            margin-right: 1vw; /* Space between icon and text */
-        }
-        .social-icons {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            bottom: 2vw;
-            left: 2vw;
-        }
-        .social-icons .social-links {
-            display: flex;
-            gap: 3vw; /* Space between the icons */
-        }
-        .social-links a {
+
+        .social-icons-left a {
             color: black; /* Black color for the icons */
-            font-size: 6vw; /* Large icon size with relative unit */
+            font-size: 5vw; /* Icon size scaled with screen size */
             text-decoration: none;
-            padding: 2vw; /* Increase the clickable area */
+            padding: 1vw; /* Padding around the icons, scaled with screen size */
         }
 
-        /* Updated CSS for the Social Links on the First Page */
-        .social-icons.top-right {
-            position: absolute;
-            top: 0px;  /* Position from the top */
-            left: calc(100% - 2vw); /* Position from the left and adjusted for right alignment */
-            transform: translateX(-100%); /* Shift the icons back to the right */
-            display: flex;
-            flex-direction: row; /* Horizontal alignment for the top-right icons */
+        .social-icons-left a:hover {
+            color: #ff9d00; /* Change color on hover */
         }
 
-        .social-icons.top-right .social-links a {
-            color: black; /* Black color for the icons */
-            font-size: calc(2vw + 8px); /* Responsive icon size */
-            text-decoration: none;
-            padding: 0px; /* Responsive padding around the icons */
-        }
-        
-        /* Updated CSS for the Social Links and Contact Info on the Last Page */
-        .social-icons.bottom-left {
-            position: absolute;
-            bottom: .5vw;  /* Position from the bottom */
-            left: 8vw; /* Position from the left */
-            display: flex;
-            flex-direction: column; /* Vertical alignment for contact info and social links */
-            align-items: flex-start;
-        }
-
-        .social-icons.bottom-left .social-links {
-            display: flex;
-            gap: 3vw; /* Space between the icons */
-        }
-
-        .social-icons.bottom-left .social-links a {
-            color: black; /* Black color for the icons */
-            font-size: calc(2vw + 16px); /* Responsive icon size */
-            text-decoration: none;
-            padding: 0%;
-        }
-
-        .social-icons.bottom-left .contact-info {
-            color: black; /* Black color for the text */
-            font-size: 4vw; /* Relative font size */
-            text-decoration: none;
-            margin-bottom: .5vw; /* Space between contact items */
-            margin-top: .5vw; /* Move the contact info down by 2vw */
-        }
-        
-        .social-icons.bottom-left .contact-info a {
-            color: black; /* Black color for the text */
-            font-size: calc(2vw + 6px); /* Responsive icon size */; /* Relative font size */
-            text-decoration: none;
-        }
-
-        .social-icons.bottom-left .contact-info i {
-            margin-right: 1vw; /* Space between icon and text */
-        }
-
-        /* Media Queries for Fine-Tuning on Smaller Screens */
-        @media (max-width: 768px) {
-            .social-icons.bottom-left .social-links a {
-                font-size: calc(3vw + 14px); /* Adjust icon size for smaller screens */
-            }
-            .social-icons.bottom-left .contact-info a {
-                font-size: calc(3vw + 14px); /* Adjust font size for smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .social-icons.bottom-left .social-links a {
-                font-size: calc(1vw + 6px); /* Adjust icon size further for very small screens */
-            }
-            .social-icons.bottom-left .contact-info a {
-                font-size: calc(1vw + 6px);; /* Adjust font size for very small screens */
-            }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- First Page with SVG and Social Icons -->
+    <!-- Social Media Icons on the Left Side -->
+    <div class="social-icons-left">
+        <a href="https://www.facebook.com/profile.php?id=61559962985037&mibextid=LQQJ4d" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/brightbridge_llc?igsh=enlpN2p1dm1jeHU1" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lindsey-draugel-0a13878a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="tel:+3526535004" alt="3526535004" target="_blank">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:lindsey@brightbridge-llc.com" alt="lindsey@brightbridge-llc.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <!-- Your SVG Content -->
     <div class="svg-container">
-        <!-- Social Media Icons in Top Right -->
-        <div class="social-icons top-right">
-            <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=61559962985037&mibextid=LQQJ4d" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/brightbridge_llc?igsh=enlpN2p1dm1jeHU1" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/lindsey-draugel-0a13878a/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
         <img src="1.svg" alt="SVG 1">
     </div>
     <div class="svg-container"><img src="2.svg" alt="SVG 2"></div>
@@ -164,31 +91,12 @@
     <div class="svg-container"><img src="4.svg" alt="SVG 4"></div>
     <div class="svg-container"><img src="5.svg" alt="SVG 5"></div>
     <div class="svg-container"><img src="6.svg" alt="SVG 6"></div>
-    <div class="svg-container"><img src="7.svg" alt="SVG 7"></div>
     <div class="svg-container">
-        <img src="8.svg" alt="SVG 8">
-        <!-- Contact Info and Social Media Icons in Bottom Left -->
-        <div class="social-icons bottom-left">
-            <div class="contact-info">
-                <a href="tel:+1234567890">
-                    <i class="fas fa-phone"></i> +1 (352) 653-5004
-                </a>
-                <a href="mailto:info@brightbridge.com">
-                    <i class="fas fa-envelope"></i> lindsey@brightbridge-llc.com
-                </a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=61559962985037&mibextid=LQQJ4d" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/brightbridge_llc?igsh=enlpN2p1dm1jeHU1" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/lindsey-draugel-0a13878a/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
+        <img src="7.svg" alt="SVG 7">
+        <!-- Footer with Licensing Text -->
+        <footer>
+            © 2024 BrightBridge LLC. All rights reserved.
+        </footer>
     </div>
 </body>
 </html>
