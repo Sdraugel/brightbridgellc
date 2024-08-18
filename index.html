@@ -11,6 +11,13 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+
+        /* Override SVG width and height */
+        svg {
+            width: 100%; /* Make SVG fill the width of its container */
+            height: auto; /* Maintain aspect ratio and adjust height automatically */
+        }
+
         .svg-container {
             margin-bottom: -1px;
             padding: 0;
@@ -20,6 +27,7 @@
             line-height: 0;
             position: relative;
         }
+
         .svg-container img {
             width: 100%;
             height: auto;
@@ -28,6 +36,7 @@
             padding: 0;
             border: 0;
         }
+
         .social-icons-left {
             position: fixed;
             top: 50%;
@@ -41,7 +50,7 @@
 
         .social-icons-left a {
             color: black; /* Black color for the icons */
-            font-size: 6vw; /* Icon size scaled with screen size */
+            font-size: 5vw; /* Icon size scaled with screen size */
             text-decoration: none;
             padding: 1vw; /* Padding around the icons, scaled with screen size */
         }
@@ -84,20 +93,18 @@
 
     <!-- Your SVG Content -->
     <div class="svg-container">
-        <img src="1.svg" alt="Hero">
+        <img src="1.svg" alt="SVG 1">
     </div>
-    <div class="svg-container"><img src="2.svg" alt="Welcome"></div>
-    <div class="svg-container"><img src="3.svg" alt="Consultations"></div>
-    <div class="svg-container"><img src="4.svg" alt="Collabs"></div>
-    <div class="svg-container"><img src="5.svg" alt="Coaching"></div>
-    <div class="svg-container"><img src="6.svg" alt="Personalized"></div>
-    <div class="svg-container"><img src="7.svg" alt="A La Carte"></div>
-    <div class="svg-container">
-        <img src="8.svg" alt="About Me">
-        <!-- Footer with Licensing Text -->
-        <footer>
-            © 2024 BrightBridge LLC. All rights reserved.
-        </footer>
-    </div>
+    <div class="svg-container"><img src="2.svg" alt="SVG 2"></div>
+    <div class="svg-container"><img src="3.svg" alt="SVG 3"></div>
+    <div class="svg-container"><img src="4.svg" alt="SVG 4"></div>
+    <div class="svg-container"><img src="5.svg" alt="SVG 5"></div>
+    <div class="svg-container"><img src="6.svg" alt="SVG 6"></div>
+    <div class="svg-container"><img src="7.svg" alt="SVG 7"></div>
+
+    <!-- Footer with Licensing Text -->
+    <footer>
+        © 2024 BrightBridge LLC. All rights reserved.
+    </footer>
 </body>
 </html>
